@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1><p>This is my new online store we are about to take over the world!.<br> <b>watch OUT</b> </p> </h1>
+    {% for pos in posts %}
+        <article class="media content-section">
+            <div class="media-body">
+                
+                <h4><a class="article-title" href="#">{{ pos.author }}</a></h2>
+                <h3> <a href="#"><p class="article-content">{{ pos.title }}</p></a> </h3>
+
+                <div class="article-metadata">
+                    <a class="mr-2" href="#"> By {{ pos.supervised }}</a>
+                    <small class="text-muted"> | {{ pos.date }}</small>
+                </div>
+            </div>
+        </article> 
+    {% endfor %}
+
+{% endblock content %} 
+
